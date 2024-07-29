@@ -10,4 +10,9 @@ export interface Linemon {
 		type: string;
 		catchRate: number;
 	};
+
+	evolutionTree?: {
+		lvl: number;
+		name: string;
+	}[];
 }
