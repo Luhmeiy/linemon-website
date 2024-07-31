@@ -145,6 +145,8 @@ export default async function Map() {
 		<main className="flex flex-col items-center py-10">
 			<h1 className="text-8xl max-sm:text-6xl font-extrabold">Map</h1>
 
+			<hr className="w-56 h-1 mx-auto my-14 bg-zinc-800 border-0 rounded" />
+
 			<div className="flex flex-col">
 				{map &&
 					map.map((row, rowIndex) => (
@@ -162,10 +164,16 @@ export default async function Map() {
 										key={`${rowIndex}-${colIndex}`}
 									>
 										{cell && cell.style === "city" && (
-											<House size={22} weight="bold" />
+											<House
+												size={22}
+												weight="bold"
+												className="text-zinc-500"
+											/>
 										)}
 										{cell && cell.type === "route" && (
-											<p>{cell.id}</p>
+											<p className="text-zinc-500">
+												{cell.id}
+											</p>
 										)}
 									</div>
 								);

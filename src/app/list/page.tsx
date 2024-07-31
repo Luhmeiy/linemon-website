@@ -3,16 +3,11 @@
 import { useState, createContext, useContext, useEffect } from "react";
 
 import { List } from "@/components/List";
-import { Linemon } from "@/interface/Linemon";
+import { Evolution, Linemon } from "@/interface/Linemon";
 
 const LinemonsContext = createContext<Linemon[]>([]);
 export function useLinemonsContext() {
 	return useContext(LinemonsContext);
-}
-
-interface Evolution {
-	lvl: number;
-	name: string;
 }
 
 const getEvolutions = (
@@ -29,6 +24,7 @@ const getEvolutions = (
 			linemon.info.evolutionStage > evolutionStage
 		) {
 			const evolution = {
+				id: linemon.id,
 				lvl: linemonEvolvesAt || evolvesAt,
 				name: linemon.info.name,
 			};

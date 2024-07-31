@@ -1,3 +1,9 @@
+export interface Evolution {
+	id: string;
+	lvl: number;
+	name: string;
+}
+
 export interface Linemon {
 	id: string;
 
@@ -11,8 +17,5 @@ export interface Linemon {
 		catchRate: number;
 	};
 
-	evolutionTree?: {
-		lvl: number;
-		name: string;
-	}[];
+	evolutionTree?: Evolution[];
 }

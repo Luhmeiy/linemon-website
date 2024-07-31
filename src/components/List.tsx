@@ -63,7 +63,7 @@ export const List = () => {
 														Lvl. {evolution.lvl}:
 													</strong>{" "}
 													<Link
-														href={`#${linemon.id}`}
+														href={`#${evolution.id}`}
 													>
 														{evolution.name}
 													</Link>
