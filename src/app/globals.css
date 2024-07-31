@@ -7,3 +7,20 @@ html {
 	color: #f4f4f5;
 	scroll-behavior: smooth;
 }
+
+@layer utilities {
+	.map-box {
+		align-items: center;
+		border-color: white;
+		border-width: 4px;
+		display: flex;
+		height: 3rem;
+		justify-content: center;
+		width: 3rem;
+	}
+
+	.empty-box {
+		height: 3rem;
+		width: 3rem;
+	}
+}
