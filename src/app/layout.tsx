@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="font-mono min-h-dvh flex flex-col">
+			<body className="font-mono min-h-dvh flex flex-col items-center">
 				<Navbar />
 				{children}
 			</body>

@@ -4,6 +4,7 @@ import { useState, createContext, useContext, useEffect } from "react";
 
 import { List } from "@/components/List";
 import { Evolution, Linemon } from "@/interface/Linemon";
+import { getTitle } from "@/utils/getTitle";
 
 const LinemonsContext = createContext<Linemon[]>([]);
 export function useLinemonsContext() {
@@ -85,9 +86,7 @@ export default function LinemonsContextProvider() {
 			}
 		>
 			<main className="flex flex-col items-center py-10">
-				<h1 className="text-8xl max-sm:text-6xl font-extrabold">
-					Linemons
-				</h1>
+				{getTitle("Linepedia")}
 
 				<hr className="w-56 h-1 mx-auto my-14 bg-zinc-800 border-0 rounded" />
 

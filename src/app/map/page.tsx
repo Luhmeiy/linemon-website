@@ -1,5 +1,7 @@
 import { House } from "@phosphor-icons/react/dist/ssr";
+
 import { LocationProps } from "@/interface/LocationProps";
+import { getTitle } from "@/utils/getTitle";
 
 const formatCell = (type: string | null) => {
 	switch (type) {
@@ -143,7 +145,7 @@ export default async function Map() {
 
 	return (
 		<main className="flex flex-col items-center py-10">
-			<h1 className="text-8xl max-sm:text-6xl font-extrabold">Map</h1>
+			{getTitle("Map")}
 
 			<hr className="w-56 h-1 mx-auto my-14 bg-zinc-800 border-0 rounded" />
 

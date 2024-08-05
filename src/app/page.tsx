@@ -1,23 +1,12 @@
 import Link from "next/link";
-import figlet from "figlet";
-import alligator2 from "figlet/importable-fonts/Alligator2.js";
 import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
 
-export default async function Home() {
-	figlet.parseFont("Alligator2", alligator2);
-	const linemon = figlet.textSync("Linemon", { font: "Alligator2" });
+import { getTitle } from "@/utils/getTitle";
 
+export default function Home() {
 	return (
 		<main className="flex flex-1 flex-col justify-center items-center gap-4">
-			<div className="text-[.5rem] sm:text-xs">
-				<p>
-					==================================================================================
-				</p>
-				<pre>{linemon}</pre>
-				<p>
-					==================================================================================
-				</p>
-			</div>
+			{getTitle("Linemon")}
 
 			<p>A text-based monster taming CLI game.</p>
 
